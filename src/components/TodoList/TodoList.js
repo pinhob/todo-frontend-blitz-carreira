@@ -1,5 +1,5 @@
 import React from "react";
-import DeleteButton from "../DeleteButton";
+import Todo from "../Todo";
 
 const TodoList = ({ todos, setTodos }) => {
   return (
@@ -15,12 +15,13 @@ const TodoList = ({ todos, setTodos }) => {
 
       <tbody>
         {todos.map(({ description, status, date }) => (
-          <tr key={ Math.random() * 1000 }>
-            <td>{ description }</td>
-            <td>{ status }</td>
-            <td>{ date }</td>
-            <td><DeleteButton description={ description } setTodos={ setTodos } /></td>
-          </tr>
+          <Todo
+            key={ Math.random() * 1000 }
+            description={ description }
+            status={ status }
+            date={ date }
+            setTodos={ setTodos }
+          />
         ))}
       </tbody>
     </table>
