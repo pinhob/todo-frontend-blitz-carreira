@@ -14,7 +14,7 @@ function App() {
       {console.log(todos)}
       <h1>Todos</h1>
       <Form setTodos={ setTodos } />
-      <TodoList todos={ todos } />
+      <TodoList todos={ todos } setTodos={ setTodos } />
     </div>
   );
 }
