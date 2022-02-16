@@ -7,13 +7,22 @@ const Form = ({ setTodos }) => {
   const onSubmit = (values) => {
     setTodos(todos => [
       ...todos, 
-      values
+      values,
     ])
   };
 
   return (
     <form onSubmit={ handleSubmit(onSubmit) }>
-      <input type="text" {...register('description')} />
+      <input type="text" {...register('description')} placeholder='Insira sua tarefa' />
+
+      <label htmlFor="status">
+        <select name="status" {...register('status')}>
+          <option value="Pendente">Pendente</option>
+          <option value="Pronto">Pronto</option>
+          <option value="Em progresso">Em progresso</option>
+        </select>
+      </label>
+
       <input type="submit" value="Adicionar" />
     </form>
   );
