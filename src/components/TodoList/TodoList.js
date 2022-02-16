@@ -9,7 +9,8 @@ const TodoList = ({ todos, setTodos }) => {
           <th>Descrição</th>
           <th>Status</th>
           <th>Data</th>
-          <th>Editar/Deletar</th>
+          <th>Editar</th>
+          <th>Deletar</th>
         </tr>
       </thead>
 
