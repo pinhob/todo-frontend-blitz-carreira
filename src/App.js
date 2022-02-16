@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
+import EditTodoForm from './components/EditTodoForm';
 
 const date = Date.now();
 const mock = [{ description: 'Beber uma breja com Tiones', status: "Pendente", date }];
