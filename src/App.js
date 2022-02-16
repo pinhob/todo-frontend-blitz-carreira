@@ -14,7 +14,6 @@ function App() {
 
   return (
     <div className="App">
-      {console.log(todos)}
       <h1>Todos</h1>
       { isEditingTodo
         ? <EditTodoForm

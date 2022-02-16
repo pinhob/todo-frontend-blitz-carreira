@@ -4,9 +4,7 @@ import { useForm } from 'react-hook-form';
 const EditTodoForm = ({ setTodos, todos, setIsEditingTodo, currentTodo: { description, date, id } }) => {
   const { handleSubmit, register } = useForm();
   const [ todoValue, setTodoValue ] = useState(description);
-
-  console.log('id', id);
-
+  
   const onSubmit = ({ description: editedDescription, status: editedStatus }) => {
     const editedTodo = {
       description: editedDescription,
