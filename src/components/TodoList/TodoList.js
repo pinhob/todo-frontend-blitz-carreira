@@ -15,15 +15,18 @@ const TodoList = ({ todos, setTodos }) => {
       </thead>
 
       <tbody>
-        {todos.map(({ description, status, date }) => (
-          <Todo
-            key={ Math.random() * 1000 }
+        {todos.map(({ description, status, date }) => {
+          const randomId = Math.random() * 1000;
+
+          return <Todo
+            key={ randomId }
             description={ description }
             status={ status }
             date={ date }
             setTodos={ setTodos }
+            id={ randomId }
           />
-        ))}
+        })}
       </tbody>
     </table>
   )
