@@ -3,7 +3,8 @@ import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 
-const mock = [{ description: 'Beber uma breja com Tiones', status: "Pendente" }];
+const date = Date.now();
+const mock = [{ description: 'Beber uma breja com Tiones', status: "Pendente", date }];
 
 function App() {
   const [todos, setTodos] = useState(mock);
