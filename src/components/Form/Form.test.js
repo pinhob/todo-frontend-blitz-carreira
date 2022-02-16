@@ -3,7 +3,6 @@ import { waitFor } from '@testing-library/react';
 import Form from '.';
 
 describe('Form', () => {
-
   it('should render the form elements', () => {
     render(<Form />);
 
@@ -14,14 +13,14 @@ describe('Form', () => {
     expect(button).toBeInTheDocument();
   });
 
-  it(`should not call the callback function`, () => {
+  it(`should not call the callback setTodos function`, () => {
     const setTodos = jest.fn();
     render(<Form setTodos={ setTodos } />);
 
     expect(setTodos).not.toHaveBeenCalled();
   });
 
-  it(`should call the callback function`, async () => {
+  it(`should call the callback setTodos function`, async () => {
     const setTodos = jest.fn();
     render(<Form setTodos={ setTodos } />);
 
