@@ -5,11 +5,14 @@ const Form = ({ setTodos }) => {
   const { handleSubmit, register } = useForm();
 
   const onSubmit = ({ description, status }) => {
+    const date = Date.now();
+
     setTodos(todos => [
       ...todos, 
       { 
         description,
         status,
+        date,
         id: todos.length + 1
       },
     ])
