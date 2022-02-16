@@ -4,11 +4,14 @@ import { useForm } from 'react-hook-form';
 const Form = ({ setTodos }) => {
   const { handleSubmit, register } = useForm();
 
-  const onSubmit = (values) => {
-
+  const onSubmit = ({ description, status }) => {
     setTodos(todos => [
       ...todos, 
-      values
+      { 
+        description,
+        status,
+        id: todos.length + 1
+      },
     ])
   };
 

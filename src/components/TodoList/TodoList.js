@@ -1,7 +1,7 @@
 import React from "react";
 import Todo from "../Todo";
 
-const TodoList = ({ todos, setTodos }) => {
+const TodoList = ({ todos, setTodos, setIsEditingTodo, setCurrentTodo }) => {
   return (
     <table>
       <thead>
@@ -15,16 +15,16 @@ const TodoList = ({ todos, setTodos }) => {
       </thead>
 
       <tbody>
-        {todos.map(({ description, status, date }) => {
-          const randomId = Math.random() * 1000;
-
+        {todos.map(({ description, status, date, id }) => {
           return <Todo
-            key={ randomId }
+            key={ id }
             description={ description }
             status={ status }
             date={ date }
             setTodos={ setTodos }
-            id={ randomId }
+            id={ id }
+            setIsEditingTodo={ setIsEditingTodo }
+            setCurrentTodo={ setCurrentTodo }
           />
         })}
       </tbody>
