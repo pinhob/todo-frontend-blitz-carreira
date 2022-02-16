@@ -1,5 +1,5 @@
 import React from "react";
-
+import DeleteButton from "../DeleteButton";
 
 const TodoList = ({ todos }) => {
   return (
@@ -9,6 +9,7 @@ const TodoList = ({ todos }) => {
           <th>Descrição</th>
           <th>Status</th>
           <th>Data</th>
+          <th>Editar/Deletar</th>
         </tr>
       </thead>
 
@@ -18,6 +19,7 @@ const TodoList = ({ todos }) => {
             <td>{ description }</td>
             <td>{ status }</td>
             <td>{ date }</td>
+            <td><DeleteButton /></td>
           </tr>
         ))}
       </tbody>
