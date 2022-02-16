@@ -5,7 +5,6 @@ const Form = ({ setTodos }) => {
   const { handleSubmit, register } = useForm();
 
   const onSubmit = (values) => {
-    console.log(values);
     setTodos(todos => [
       ...todos, 
       values
