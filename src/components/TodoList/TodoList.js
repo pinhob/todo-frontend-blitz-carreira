@@ -16,14 +16,11 @@ const TodoList = ({ todos, setTodos, setIsEditingTodo, setCurrentTodo }) => {
       </thead>
 
       <tbody>
-        {todos.map(({ description, status, date, id }) => {
+        {todos.map((todo) => {
           return <Todo
-            key={ id }
-            description={ description }
-            status={ status }
-            date={ date }
+            key={ todo.id }
+            todo={ todo }
             setTodos={ setTodos }
-            id={ id }
             setIsEditingTodo={ setIsEditingTodo }
             setCurrentTodo={ setCurrentTodo }
           />

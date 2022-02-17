@@ -1,7 +1,9 @@
 import React from "react";
 import './Todo.css';
 
-const Todo = ({ description, status, date, setTodos, id, setIsEditingTodo, setCurrentTodo }) => {
+const Todo = ({ todo, setTodos, setIsEditingTodo, setCurrentTodo }) => {
+  const { description, status, date, id } = todo;
+
   const deleteTodo = () => {
     setTodos((todos) => todos.filter((todo) => todo.description !== description))
   };
