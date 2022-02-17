@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Todo Ebytr
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Neste repositório está o **Front-end do desafio técnico da Ebytr**. É uma aplicação de **Todo List que permite que o usuário insira, edite, gerencie o status e exclua tarefas**.
 
-## Available Scripts
+## Contexto do desafio
+> A empresa Ebytr está passando por problemas de produtividade/controle porque as pessoas colaboradoras vêm tendo dificuldade na organização de suas tarefas individuais. Por esse motivo, a diretora de produto Carolina Bigonha decidiu implantar uma nova forma de organizar as tarefas. Você foi a pessoa contratada para desenvolver um sistema capaz de auxiliar as pessoas colaboradoras a se organizar e ter mais produtividade.
 
-In the project directory, you can run:
+## Stack utilizada
+![MERN Stack]('./public/mern_stack.jpeg')
 
-### `npm start`
+Para este desafio utilizei a stack **MERN**. Neste repositório você encontra a aplicação em **React**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Rodando o projeto
+### Pré-requisitos: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para rodar este projeto é necessário que você tenha instalado:
+* **Node**, na versão `14.6` ou maior;
+* **NPM**, na versão `7.21`ou maior;
 
-### `npm test`
+### Clonando o repositório
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone o repositório inserindo os seguintes comandos em seu terminal: 
+```
+git clone git@github.com:pinhob/todo-frontend-blitz-carreira.git
+cd todo-frontend-blitz-carreira
+```
+### Instalando as dependências
+Dentro do diretório do projeto, rode em seu terminal o comando para instalar as dependências: 
+```
+npm install
+```
+Com isso será descarregado o `node_modules` e instalada as seguintes dependências:
+* **create-react-app**
+* **React Hook Form**
 
-### `npm run build`
+### Rodando o projeto
+Execute o projeto com o comando:
+```
+npm start
+```
+### Rodando a suíte de testes
+Foram criados diferentes testes para validar a funcionalidade e usabilidade da aplicação. Você pode rodá-los utilizando o comando:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm run test
+```
+Ou de forma individual utilizando o comando:
+```
+npm run test <nome-do-arquivo>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm run test todolist
+npm run test todo
+npm run test form
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Próximos passos
+Alguns dos próximos passos para a aplicação são:
+* **Integrar com o Back-end e armazenar a lista de tarefas do usuário**;
+* **Carregar as tarefas já inseridas quando a aplicação for recarregada**;
+* **Aumentar a cobertura de testes dos compoentes**;
+* Adicionar a dependência *React Select* para estilizar os campos de `select` dos formulários de inserção e edição de _todos_;
+* Adicionar a dependência *Font Awesome* para estilizar os botões de `Editar` e `Deletar` de cada _todo_;
+* Corrigir detalhes de estilização, como o posicionamento dos componentes na tela;
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+_Parte da estrutura deste repositório se inspiroou na do colega [Murilo Valença](https://github.com/murilorsv14/Desafio-Tecnico-Ebytr). Obrigado por compartilhar com a gente, Murilo!_ :rocket:
