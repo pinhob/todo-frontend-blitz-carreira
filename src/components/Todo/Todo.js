@@ -2,6 +2,7 @@ import React from "react";
 import './Todo.css';
 
 const Todo = ({ todo, setTodos, setIsEditingTodo, setCurrentTodo }) => {
+  console.log(todo);
   const { description, status, date, id } = todo;
 
   const deleteTodo = () => {
@@ -18,8 +19,8 @@ const Todo = ({ todo, setTodos, setIsEditingTodo, setCurrentTodo }) => {
       <td data-testid="description">{description}</td>
       <td data-testid="status">{status}</td>
       <td data-testid="date">{date}</td>
-      <td><input className="edit-btn" type="button" value="Editar" onClick={editTodo} /></td>
-      <td><input className="delete-btn" type="button" value="Deletar" onClick={deleteTodo} /></td>
+      <td><input data-testid="edit-btn" className="edit-btn" type="button" value="Editar" onClick={editTodo} /></td>
+      <td><input data-testid="delete-btn" className="delete-btn" type="button" value="Deletar" onClick={deleteTodo} /></td>
     </tr >
   )
 };
