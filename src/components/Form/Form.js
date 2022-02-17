@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Form.css'
 import { useForm } from 'react-hook-form';
 
 const Form = ({ setTodos }) => {
   const { handleSubmit, register } = useForm();
+  const [todoValue, setTodoValue] = useState('');
+
+  const handleChange = (event) => {
+    setTodoValue(event.target.value);
+  }
 
   const onSubmit = ({ description, status }) => {
     const date = Date.now();
@@ -17,11 +22,19 @@ const Form = ({ setTodos }) => {
         id: todos.length + 1
       },
     ])
+
+    setTodoValue('');
   };
 
   return (
     <form className='add-todo-form' onSubmit={ handleSubmit(onSubmit) }>
-      <input className='input-todo-description' type="text" {...register('description')} placeholder='Insira sua tarefa' />
+      <input
+        required
+        className='input-todo-description'
+        type="text" {...register('description')}
+        value={ todoValue }
+        onChange={ handleChange }
+        placeholder='Insira sua tarefa' />
 
       <label className="select-todo-status" htmlFor="status">
         <select name="status" {...register('status')}>
