@@ -13,6 +13,18 @@ describe('TodoList', () => {
     expect(table).toBeInTheDocument();
   });
 
+  it('should have todo table header', () => {
+    render(<TodoList todos={ mock } />);
+
+    const tableHeader = screen.getAllByRole('row')[0];
+    const descriptionHeader = screen.getByRole('columnheader', {
+      name: /descrição/i
+    })
+
+    expect(tableHeader).toBeInTheDocument();
+    expect(descriptionHeader).toBeInTheDocument();
+  })
+
   it(`should have ${mock.length} items`, () => {
     render(<TodoList todos={ mock } />);
 
