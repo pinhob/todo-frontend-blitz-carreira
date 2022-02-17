@@ -5,7 +5,7 @@ import TodoList from './components/TodoList';
 import EditTodoForm from './components/EditTodoForm';
 
 const date = Date.now();
-const mock = [{ description: 'Beber uma breja com Tiones', status: "Pendente", date, id: 1 }];
+const mock = [{ description: 'Mock teste', status: "Pendente", date, id: 1 }];
 
 function App() {
   const [todos, setTodos] = useState(mock);
