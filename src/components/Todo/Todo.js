@@ -18,7 +18,7 @@ const Todo = ({ todo, setTodos, setIsEditingTodo, setCurrentTodo }) => {
     <tr>
       <td data-testid="description">{description}</td>
       <td data-testid="status">{status}</td>
-      <td data-testid="date">{date}</td>
+      <td data-testid="date">{`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}</td>
       <td><input data-testid="edit-btn" className="edit-btn" type="button" value="Editar" onClick={editTodo} /></td>
       <td><input data-testid="delete-btn" className="delete-btn" type="button" value="Deletar" onClick={deleteTodo} /></td>
     </tr >
