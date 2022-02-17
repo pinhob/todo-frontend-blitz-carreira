@@ -4,11 +4,8 @@ import Form from './components/Form';
 import TodoList from './components/TodoList';
 import EditTodoForm from './components/EditTodoForm';
 
-const date = Date.now();
-const mock = [{ description: 'Mock teste', status: "Pendente", date, id: 1 }];
-
 function App() {
-  const [todos, setTodos] = useState(mock);
+  const [todos, setTodos] = useState();
   const [isEditingTodo, setIsEditingTodo] = useState(false);
   const [currentTodo, setCurrentTodo] = useState({});
 
