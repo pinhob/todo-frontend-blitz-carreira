@@ -1,0 +1,17 @@
+input[type='button'] {
+  height: 40px;
+  font-weight: 600;
+  font-size: 0.8em;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.edit-btn {
+  background-color: #4F2A86;
+}
+
+.delete-btn {
+  background-color: #E5101E;
+}
