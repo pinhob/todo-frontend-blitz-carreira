@@ -11,7 +11,7 @@ const Form = ({ setTodos }) => {
   }
 
   const onSubmit = ({ description, status }) => {
-    const date = Date.now();
+    const date = new Date();
 
     setTodos(todos => [
       ...todos, 
