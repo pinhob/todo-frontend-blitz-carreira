@@ -23,7 +23,6 @@ function App() {
           />
           : <Form setTodos={setTodos} />
         }
-        {console.log(todos.length)}
         {
         <TodoList
           todos={todos}
