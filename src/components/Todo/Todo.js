@@ -15,9 +15,9 @@ const Todo = ({ todo, setTodos, setIsEditingTodo, setCurrentTodo }) => {
 
   return (
     <tr>
-      <td>{description}</td>
-      <td>{status}</td>
-      <td>{date}</td>
+      <td data-testid="description">{description}</td>
+      <td data-testid="status">{status}</td>
+      <td data-testid="date">{date}</td>
       <td><input className="edit-btn" type="button" value="Editar" onClick={editTodo} /></td>
       <td><input className="delete-btn" type="button" value="Deletar" onClick={deleteTodo} /></td>
     </tr >
