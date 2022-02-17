@@ -3,6 +3,7 @@ import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 import EditTodoForm from './components/EditTodoForm';
+import Footer from './components/Footer';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -32,6 +33,9 @@ function App() {
         />
         }
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
