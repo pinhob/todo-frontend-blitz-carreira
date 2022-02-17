@@ -3,6 +3,8 @@ import './TodoList.css';
 import Todo from "../Todo";
 
 const TodoList = ({ todos, setTodos, setIsEditingTodo, setCurrentTodo }) => {
+  const ZERO = 0;
+
   return (
     <table>
       <thead className="header-todo-list">
@@ -15,16 +17,21 @@ const TodoList = ({ todos, setTodos, setIsEditingTodo, setCurrentTodo }) => {
         </tr>
       </thead>
 
+      
       <tbody>
-        {todos.map((todo) => {
-          return <Todo
-            key={ todo.id }
-            todo={ todo }
-            setTodos={ setTodos }
-            setIsEditingTodo={ setIsEditingTodo }
-            setCurrentTodo={ setCurrentTodo }
-          />
-        })}
+        {
+          todos.length !== ZERO 
+            ? todos.map((todo) => {
+              return <Todo
+                key={ todo.id }
+                todo={ todo }
+                setTodos={ setTodos }
+                setIsEditingTodo={ setIsEditingTodo }
+                setCurrentTodo={ setCurrentTodo }
+              />
+              })
+            : <tr><td>Nenhuma tarefa adicionada</td></tr>
+        }
       </tbody>
     </table>
   )

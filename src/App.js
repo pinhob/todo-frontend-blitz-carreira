@@ -22,12 +22,15 @@ function App() {
           />
           : <Form setTodos={setTodos} />
         }
+        {console.log(todos.length)}
+        {
         <TodoList
           todos={todos}
           setTodos={setTodos}
           setIsEditingTodo={setIsEditingTodo}
           setCurrentTodo={setCurrentTodo}
         />
+        }
       </div>
     </div>
   );
