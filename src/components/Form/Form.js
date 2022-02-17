@@ -31,9 +31,12 @@ const Form = ({ setTodos }) => {
       <input
         required
         className='input-todo-description'
-        type="text" {...register('description')}
         value={ todoValue }
-        onChange={ handleChange }
+        // onChange={ handleChange }
+        {...register('description', {
+          onChange: handleChange
+        })}
+        type="text"
         placeholder='Insira sua tarefa' />
 
       <label className="select-todo-status" htmlFor="status">
