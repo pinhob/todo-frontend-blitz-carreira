@@ -6,7 +6,10 @@ Neste repositório está o **Front-end do desafio técnico da Ebytr**. É uma ap
 > A empresa Ebytr está passando por problemas de produtividade/controle porque as pessoas colaboradoras vêm tendo dificuldade na organização de suas tarefas individuais. Por esse motivo, a diretora de produto Carolina Bigonha decidiu implantar uma nova forma de organizar as tarefas. Você foi a pessoa contratada para desenvolver um sistema capaz de auxiliar as pessoas colaboradoras a se organizar e ter mais produtividade.
 
 ## Stack utilizada
-![MERN Stack]('./public/mern_stack.jpeg')
+<p align="center">
+  <img alt="MERN Stack" align="center" width="362" height="160" src="https://user-images.githubusercontent.com/20286747/154488744-6248dda0-e602-4291-97b8-b2682db9c9a2.jpeg">
+</p>
+
 
 Para este desafio utilizei a stack **MERN**. Neste repositório você encontra a aplicação em **React**.
 
