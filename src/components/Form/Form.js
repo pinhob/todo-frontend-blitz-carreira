@@ -1,4 +1,5 @@
 import React from 'react';
+import './Form.css'
 import { useForm } from 'react-hook-form';
 
 const Form = ({ setTodos }) => {
@@ -19,10 +20,10 @@ const Form = ({ setTodos }) => {
   };
 
   return (
-    <form onSubmit={ handleSubmit(onSubmit) }>
-      <input type="text" {...register('description')} placeholder='Insira sua tarefa' />
+    <form className='add-todo-form' onSubmit={ handleSubmit(onSubmit) }>
+      <input className='input-todo-description' type="text" {...register('description')} placeholder='Insira sua tarefa' />
 
-      <label htmlFor="status">
+      <label className="select-todo-status" htmlFor="status">
         <select name="status" {...register('status')}>
           <option value="Pendente">Pendente</option>
           <option value="Pronto">Pronto</option>
@@ -30,7 +31,7 @@ const Form = ({ setTodos }) => {
         </select>
       </label>
 
-      <input type="submit" value="Adicionar" />
+      <input className="submit-form-btn" type="submit" value="+" />
     </form>
   );
 }

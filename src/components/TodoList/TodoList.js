@@ -1,10 +1,11 @@
 import React from "react";
+import './TodoList.css';
 import Todo from "../Todo";
 
 const TodoList = ({ todos, setTodos, setIsEditingTodo, setCurrentTodo }) => {
   return (
     <table>
-      <thead>
+      <thead className="header-todo-list">
         <tr>
           <th>Descrição</th>
           <th>Status</th>

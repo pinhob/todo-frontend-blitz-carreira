@@ -1,4 +1,5 @@
 import React from "react";
+import './Todo.css';
 
 const Todo = ({ description, status, date, setTodos, id, setIsEditingTodo, setCurrentTodo }) => {
   const deleteTodo = () => {
@@ -15,8 +16,8 @@ const Todo = ({ description, status, date, setTodos, id, setIsEditingTodo, setCu
       <td>{description}</td>
       <td>{status}</td>
       <td>{date}</td>
-      <td><input type="button" value="Editar" onClick={editTodo} /></td>
-      <td><input type="button" value="Deletar" onClick={deleteTodo} /></td>
+      <td><input className="edit-btn" type="button" value="Editar" onClick={editTodo} /></td>
+      <td><input className="delete-btn" type="button" value="Deletar" onClick={deleteTodo} /></td>
     </tr >
   )
 };

@@ -14,22 +14,24 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Todos</h1>
-      { isEditingTodo
-        ? <EditTodoForm
-            setTodos={ setTodos }
-            todos={ todos }
-            currentTodo={ currentTodo }
-            setIsEditingTodo={ setIsEditingTodo }
+      <div className='todo-app'>
+        <h1 className='header-title'>Lista de tarefas</h1>
+        {isEditingTodo
+          ? <EditTodoForm
+            setTodos={setTodos}
+            todos={todos}
+            currentTodo={currentTodo}
+            setIsEditingTodo={setIsEditingTodo}
           />
-        : <Form setTodos={ setTodos } />
-      }
-      <TodoList
-        todos={ todos }
-        setTodos={ setTodos }
-        setIsEditingTodo={ setIsEditingTodo }
-        setCurrentTodo={ setCurrentTodo }
-      />
+          : <Form setTodos={setTodos} />
+        }
+        <TodoList
+          todos={todos}
+          setTodos={setTodos}
+          setIsEditingTodo={setIsEditingTodo}
+          setCurrentTodo={setCurrentTodo}
+        />
+      </div>
     </div>
   );
 }
