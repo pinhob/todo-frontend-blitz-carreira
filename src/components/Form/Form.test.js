@@ -6,10 +6,12 @@ describe('Form', () => {
   it('should render the form elements', () => {
     render(<Form />);
 
-    const textInput = screen.getByRole('textbox');
+    const descriptionInput = screen.getByRole('textbox');
+    const statusInput = screen.getByRole('combobox');
     const button = screen.getByRole('button');
 
-    expect(textInput).toBeInTheDocument();
+    expect(descriptionInput).toBeInTheDocument();
+    expect(statusInput).toBeInTheDocument();
     expect(button).toBeInTheDocument();
   });
 
@@ -24,14 +26,13 @@ describe('Form', () => {
     const setTodos = jest.fn();
     render(<Form setTodos={ setTodos } />);
 
-    const textInput = screen.getByRole('textbox');
+    const descriptionInput = screen.getByRole('textbox');
+    const statusInput = screen.getByRole('combobox');
     const button = screen.getByRole('button');
 
-    fireEvent.change(textInput, {
-      target: {
-        value: 'Teste'
-      }
-    });
+    fireEvent.change(descriptionInput, { target: { value: 'Teste' } });
+
+    fireEvent.change(statusInput, { target: { value: 'Pronto' } })
 
     fireEvent.click(button);
 

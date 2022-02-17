@@ -1,23 +1,26 @@
 import { render, screen } from '@testing-library/react';
 import TodoList from '.';
 
-const mock = [{ description: 'Beber uma breja com Tiones' }];
+const mock = [{ description: 'Mock de testes', id: 1 }];
 
 describe('TodoList', () => {
 
-  it('should render the list', () => {
+  it('should render the todo list table', () => {
     render(<TodoList todos={ mock } />);
 
-    const list = screen.getByRole('list');
+    const table = screen.getByRole('table');
 
-    expect(list).toBeInTheDocument();
+    expect(table).toBeInTheDocument();
   });
 
   it(`should have ${mock.length} items`, () => {
     render(<TodoList todos={ mock } />);
 
-    const items = screen.getAllByRole('listitem');
+    const items = screen.getAllByRole('row');
+    
+    // subtract header row from items length
+    const todos = items.length - 1;
 
-    expect(items.length).toBe(mock.length);
+    expect(todos).toBe(mock.length);
   });
 });
