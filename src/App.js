@@ -11,7 +11,7 @@ function App() {
   const [currentTodo, setCurrentTodo] = useState({});
 
   return (
-    <div className="App">
+    <div data-testid="app" className="App">
       <div className='todo-app'>
         <h1 className='header-title'>Lista de tarefas</h1>
         {isEditingTodo
