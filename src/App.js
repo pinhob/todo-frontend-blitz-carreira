@@ -5,7 +5,7 @@ import TodoList from './components/TodoList';
 import EditTodoForm from './components/EditTodoForm';
 
 function App() {
-  const [todos, setTodos] = useState();
+  const [todos, setTodos] = useState([]);
   const [isEditingTodo, setIsEditingTodo] = useState(false);
   const [currentTodo, setCurrentTodo] = useState({});
 
