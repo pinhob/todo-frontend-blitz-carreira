@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Form from './components/Form';
+import TodoList from './components/TodoList';
+import EditTodoForm from './components/EditTodoForm';
+import Footer from './components/Footer';
 
 function App() {
+  const [todos, setTodos] = useState([]);
+  const [isEditingTodo, setIsEditingTodo] = useState(false);
+  const [currentTodo, setCurrentTodo] = useState({});
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='todo-app'>
+        <h1 className='header-title'>Lista de tarefas</h1>
+        {isEditingTodo
+          ? <EditTodoForm
+            setTodos={setTodos}
+            todos={todos}
+            currentTodo={currentTodo}
+            setIsEditingTodo={setIsEditingTodo}
+          />
+          : <Form setTodos={setTodos} />
+        }
+        {
+        <TodoList
+          todos={todos}
+          setTodos={setTodos}
+          setIsEditingTodo={setIsEditingTodo}
+          setCurrentTodo={setCurrentTodo}
+        />
+        }
+      </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

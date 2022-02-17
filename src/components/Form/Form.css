@@ -1,0 +1,37 @@
+.add-todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 10px 20px 0;
+}
+
+.input-todo-description {
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 40%;
+  height: 40px; 
+  margin-right: 3%;
+  font-size: 1.3em;
+  padding-left: 8px;
+}
+
+.input-todo-description:focus {
+  outline: auto;
+  outline-color: #4f2a86;
+}
+
+.select-todo-status {
+  margin-right: 3%;
+}
+
+.submit-form-btn {
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  border-radius: 3px;
+  font-weight: 900;
+  font-size: 1.8em;
+  color: white;
+  background-color: #1F6B52;
+}

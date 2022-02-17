@@ -1,0 +1,14 @@
+table {
+  width: 70%;
+  text-align: center;
+}
+
+th, td {
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+th {
+  border-radius: 5px;
+  background-color: #1F6B52;
+}
