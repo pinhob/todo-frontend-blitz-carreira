@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './EditTodoForm.css';
 import { useForm } from 'react-hook-form';
 
 const EditTodoForm = ({ setTodos, todos, setIsEditingTodo, currentTodo: { description, date, id } }) => {
@@ -24,8 +25,9 @@ const EditTodoForm = ({ setTodos, todos, setIsEditingTodo, currentTodo: { descri
   }
   
   return (
-    <form onSubmit={ handleSubmit(onSubmit) }>
+    <form className='add-todo-form' onSubmit={ handleSubmit(onSubmit) }>
       <input
+        className='input-todo-description'
         type="text"
         placeholder='Edite'
         defaultValue={ todoValue }
@@ -33,7 +35,7 @@ const EditTodoForm = ({ setTodos, todos, setIsEditingTodo, currentTodo: { descri
         {...register('description')}  
       />
 
-      <label htmlFor="status">
+      <label className="select-todo-status" htmlFor="status">
         <select name="status" {...register('status')}>
           <option value="Pendente">Pendente</option>
           <option value="Pronto">Pronto</option>
@@ -41,7 +43,7 @@ const EditTodoForm = ({ setTodos, todos, setIsEditingTodo, currentTodo: { descri
         </select>
       </label>
 
-      <input type="submit" value="Adicionar" />
+      <input className="submit-form-btn" type="submit" value="+" />
     </form>
   );
 }
