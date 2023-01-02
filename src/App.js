@@ -1,14 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 import EditTodoForm from './components/EditTodoForm';
 import Footer from './components/Footer';
+import axios from 'axios';
 
 function App() {
   const [todos, setTodos] = useState([]);
   const [isEditingTodo, setIsEditingTodo] = useState(false);
   const [currentTodo, setCurrentTodo] = useState({});
+
+  useEffect(() => {
+    axios.get('http://200.229.203.112/SigmaFibraService/service/api/mobile/certification/manual/repairPendency/')
+      .then((result) => {
+        console.log(result.data)
+      }).catch((error) => {
+        console.log(error)
+        return { actionDone: false }
+      })
+  }, []);
 
   return (
     <div data-testid="app" className="App">
@@ -24,12 +35,12 @@ function App() {
           : <Form setTodos={setTodos} />
         }
         {
-        <TodoList
-          todos={todos}
-          setTodos={setTodos}
-          setIsEditingTodo={setIsEditingTodo}
-          setCurrentTodo={setCurrentTodo}
-        />
+          <TodoList
+            todos={todos}
+            setTodos={setTodos}
+            setIsEditingTodo={setIsEditingTodo}
+            setCurrentTodo={setCurrentTodo}
+          />
         }
       </div>
       <footer>
