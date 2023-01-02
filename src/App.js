@@ -11,16 +11,6 @@ function App() {
   const [isEditingTodo, setIsEditingTodo] = useState(false);
   const [currentTodo, setCurrentTodo] = useState({});
 
-  useEffect(() => {
-    axios.get('http://200.229.203.112/SigmaFibraService/service/api/mobile/certification/manual/repairPendency/')
-      .then((result) => {
-        console.log(result.data)
-      }).catch((error) => {
-        console.log(error)
-        return { actionDone: false }
-      })
-  }, []);
-
   return (
     <div data-testid="app" className="App">
       <div className='todo-app'>
